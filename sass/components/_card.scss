@@ -1,0 +1,118 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem;
+  width: 90%;
+  background-color: #ffffff;
+  box-shadow: 0 1.5rem 4rem rgba($color-text, 0.15);
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+  border-bottom: 3px;
+  border-bottom-color: $color-highlight;
+  border-bottom-style: solid;
+  box-sizing: border-box;
+
+  &__image {
+    width: 100%;
+    margin-bottom: 3rem;
+
+    & > img {
+      max-width: 100%;
+    }
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  &__countdown {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+  }
+
+  &__countdown-years,
+  &__countdown-days,
+  &__countdown-hours,
+  &__countdown-minutes,
+  &__countdown-seconds {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__weather {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    // margin-top: 1.6rem;
+    gap: 0.5rem;
+
+    &-location {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      border: 1px solid #e4e4e4;
+      border-radius: 3px;
+      box-shadow: 3px 3px 5px rgba($color-text, 0.15);
+      padding: 1rem 1.6rem;
+      color: $color-text;
+      font-family: Oswald;
+      width: 100%;
+    }
+    &-city-cond-wrap {
+      display: flex;
+      flex-direction: column;
+    }
+    &-city {
+      text-transform: uppercase;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: $color-primary;
+    }
+    &-cond {
+      text-transform: capitalize;
+      font-size: 1.1;
+    }
+    &-temp {
+      font-size: 4.5rem;
+      line-height: 1;
+      color: $color-tertiary;
+      display: flex;
+      align-items: flex-start;
+    }
+    &-high-low-wrap {
+      display: flex;
+      flex-direction: column;
+    }
+    &-icon {
+      padding: 0;
+      margin: 0;
+    }
+    &-icon > img {
+      width: 5rem;
+    }
+  }
+}
+// .multi-port-weather {
+//   display: flex;
+//   justify-content: center;
+//   flex-wrap: wrap;
+//   gap: 1rem;
+// }
+
+@media only screen and (min-width: 599px) {
+  .card {
+    max-width: 600px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .multi-port-weather > .card__weather {
+    gap: 1rem;
+    width: 35%;
+  }
+}

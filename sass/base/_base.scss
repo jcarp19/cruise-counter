@@ -1,0 +1,59 @@
+/* BASE COLORS */
+$color-text: #222222;
+
+/* Color Theme Swatches in RGBA */
+$color-primary: #03738c;
+$color-secondary: rgba(3, 127, 140, 1);
+$color-tertiary: rgba(143, 189, 217, 1);
+
+$color-background: rgba(240, 240, 242, 1);
+$color-highlight: rgba(242, 157, 82, 1);
+
+/* CSS RESET */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /* 10px / 16px = 62.5% => 1rem = 10px */
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.self-ctr {
+  align-self: center;
+}
+
+.mt-2 {
+  margin-top: 2rem;
+}
+
+.sm-text {
+  font-size: 2rem;
+}

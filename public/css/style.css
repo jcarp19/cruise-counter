@@ -1,0 +1,319 @@
+/* BASE COLORS */
+/* Color Theme Swatches in RGBA */
+/* CSS RESET */
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;700&family=Source+Serif+Pro:wght@300;400;600;700&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /* 10px / 16px = 62.5% => 1rem = 10px */
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.self-ctr {
+  align-self: center;
+}
+
+.mt-2 {
+  margin-top: 2rem;
+}
+
+.sm-text {
+  font-size: 2rem;
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 1;
+  overflow: hidden;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.bg-video__content {
+  margin-left: -83rem;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+@media only screen and (min-width: 550px) {
+  .bg-video__content {
+    margin-left: -73rem;
+  }
+}
+@media only screen and (min-width: 950px) {
+  .bg-video__content {
+    margin-left: -63rem;
+  }
+}
+@media only screen and (min-width: 1050px) {
+  .bg-video__content {
+    margin-left: -53rem;
+  }
+}
+@media only screen and (min-width: 1150px) {
+  .bg-video__content {
+    margin-left: -43rem;
+  }
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem;
+  width: 90%;
+  background-color: #ffffff;
+  box-shadow: 0 1.5rem 4rem rgba(34, 34, 34, 0.15);
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+  border-bottom: 3px;
+  border-bottom-color: rgb(242, 157, 82);
+  border-bottom-style: solid;
+  box-sizing: border-box;
+}
+
+.card__image {
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+.card__image > img {
+  max-width: 100%;
+}
+
+.card__header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.card__countdown {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.card__countdown-years, .card__countdown-days, .card__countdown-hours, .card__countdown-minutes, .card__countdown-seconds {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card__weather {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 0.5rem;
+}
+
+.card__weather-location {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #e4e4e4;
+  border-radius: 3px;
+  box-shadow: 3px 3px 5px rgba(34, 34, 34, 0.15);
+  padding: 1rem 1.6rem;
+  color: #222222;
+  font-family: Oswald;
+  width: 100%;
+}
+
+.card__weather-city-cond-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.card__weather-city {
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #03738c;
+}
+
+.card__weather-cond {
+  text-transform: capitalize;
+  font-size: 1.1;
+}
+
+.card__weather-temp {
+  font-size: 4.5rem;
+  line-height: 1;
+  color: rgb(143, 189, 217);
+  display: flex;
+  align-items: flex-start;
+}
+
+.card__weather-high-low-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.card__weather-icon {
+  padding: 0;
+  margin: 0;
+}
+
+.card__weather-icon > img {
+  width: 5rem;
+}
+
+@media only screen and (min-width: 599px) {
+  .card {
+    max-width: 600px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .multi-port-weather > .card__weather {
+    gap: 1rem;
+    width: 35%;
+  }
+}
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 3rem;
+  margin: 3rem 0;
+}
+
+@media only screen and (min-width: 900px) {
+  .main {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+}
+.header {
+  width: 100%;
+  height: 50rem;
+  overflow: hidden;
+  position: relative;
+  background-image: url("../img/odyssey_docked.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.header__counter {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #00a3e8;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 5rem;
+  top: 2rem;
+  right: 2rem;
+  border: 3px solid #ffffff;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+}
+
+.header__counter h2,
+.header__counter p {
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.header__heading {
+  max-width: 75%;
+  text-align: right;
+  position: absolute;
+  right: 2rem;
+  bottom: 5rem;
+}
+
+.header__heading-span {
+  padding: 1rem 2rem;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  background-image: linear-gradient(to bottom right, rgba(3, 115, 140, 0.75), rgba(143, 189, 217, 0.75));
+  box-shadow: 3px 3px 7px rgba(34, 34, 34, 0.5);
+}
+
+body {
+  font-family: "Source Serif Pro", serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: #222222;
+  background-color: rgb(240, 240, 242);
+}
+
+h1 {
+  font-family: "Oswald", sans-serif;
+  font-weight: 300;
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+h2 {
+  font-family: "Oswald", sans-serif;
+  font-weight: 500;
+  font-size: 2.75rem;
+  color: #03738c;
+}
+
+h3 {
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 2.25rem;
+  color: rgb(3, 127, 140);
+}
+
+h4 {
+  font-family: "Oswald", sans-serif;
+  font-weight: 200;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  color: rgb(143, 189, 217);
+}
+
+
+
+/*# sourceMappingURL=style.css.map */
