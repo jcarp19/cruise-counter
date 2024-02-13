@@ -88,5 +88,3 @@ locations.map((loc) => {
       console.error("Error:", error);
     });
 });
-
-//https://api.openweathermap.org/data/3.0/onecall?lat=26.0872&lon=-80.1205&appid=e76129712c8e55a552d1aec830ff1ac0&units=imperial&exclude=minutely,hourly,alerts
